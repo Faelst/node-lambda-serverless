@@ -1,0 +1,20 @@
+{
+  "name": "node-lambda-serverless",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Rafael Silverio <fael_st@hotmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "predeploy": "rm -rf node_modules/sharp && npm install --platform=linux --arch=x64 --target=8.10.0 sharp",
+    "deploy": "serverless deploy -v",
+    "postdeploy": "rm -rf node_modules/sharp && npm install sharp",
+    "start": "serverless start -v",
+    "invoke": "serverless invoke -v",
+    "invoke-local": "serverless invoke local -v",
+    "invoke-local-debug": "serverless invoke local -v --debug",
+    "invoke-debug": "serverless invoke -v --debug"
+  },
+  "dependencies": {
+    "sharp": "^0.29.3"
+  }
+}
