@@ -17,6 +17,19 @@ provider:
         - arn:aws:s3:::*
 
 functions:
+  hello:
+    handler: handler.hello
+    events:
+      - http:
+          path: /
+          method: get
+          cors: true
+          credentials: true
+          response:
+            statusCodes:
+              200:
+                template: 'Hello {{input.params.name}}!'
+
   optimize:
     handler: optimize.handler
     environment:
@@ -28,3 +41,20 @@ functions:
           rules:
             - prefix: uploads/
             - suffix: .png
+
+  firebaseAuth:
+    handler: handler.firebaseAuth
+    events:
+      - http:
+          path: /firebase-auth
+          method: post
+          cors: true
+          credentials: true
+          response:
+            statusCodes:
+              200:
+                template: 'Hello {{input.params.name}}!'
+
+
+plugins:
+  - "serverless-offline"

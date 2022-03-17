@@ -190,7 +190,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/nodeless/dev/1639462794638-2021-12-14T06:19:54.638Z/nodeless.zip"
+                "S3Key": "serverless/nodeless/dev/1647540249529-2022-03-17T18:04:09.529Z/nodeless.zip"
               },
               "Handler": "optimize.handler",
               "Runtime": "nodejs12.x",
@@ -213,14 +213,14 @@
               "OptimizeLogGroup"
             ]
           },
-          "OptimizeLambdaVersion2M0svpNzx1JPBpkLljF8XsuessbxFbiOoE2I6fdniQ": {
+          "OptimizeLambdaVersionTy7inkpjtF73xw5MQaxNnIcuzZs0My9y9g9Jdynhs": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "OptimizeLambdaFunction"
               },
-              "CodeSha256": "JwK8RHUf8C/XoMrp9zn9P7uttoSuGj2pahI0LDwN470="
+              "CodeSha256": "t1k0W2zGVvnzbmxRe3LnaGmUbkAL/YFToy9Wh5ilZa8="
             }
           },
           "S3BucketServerless": {
@@ -300,7 +300,7 @@
           "OptimizeLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "OptimizeLambdaVersion2M0svpNzx1JPBpkLljF8XsuessbxFbiOoE2I6fdniQ"
+              "Ref": "OptimizeLambdaVersionTy7inkpjtF73xw5MQaxNnIcuzZs0My9y9g9Jdynhs"
             },
             "Export": {
               "Name": "sls-nodeless-dev-OptimizeLambdaFunctionQualifiedArn"
@@ -421,7 +421,7 @@
         "timeout": 6,
         "runtime": "nodejs12.x",
         "vpc": {},
-        "versionLogicalId": "OptimizeLambdaVersion2M0svpNzx1JPBpkLljF8XsuessbxFbiOoE2I6fdniQ"
+        "versionLogicalId": "OptimizeLambdaVersionTy7inkpjtF73xw5MQaxNnIcuzZs0My9y9g9Jdynhs"
       }
     },
     "configValidationMode": "warn",
@@ -443,7 +443,7 @@
     "artifact": "/media/SSD/www/node-lambda-serverless/.serverless/nodeless.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/nodeless/dev/1639462794638-2021-12-14T06:19:54.638Z",
+    "artifactDirectoryName": "serverless/nodeless/dev/1647540249529-2022-03-17T18:04:09.529Z",
     "artifact": "nodeless.zip"
   }
 }
